@@ -1,4 +1,4 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -18,4 +18,120 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+} */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: 120 30% 98%; /* Very Pale Greenish White */
+    --foreground: 120 25% 20%; /* Dark Desaturated Green-Gray */
+
+    --muted: 120 25% 94%; /* Pale Green-Gray */
+    --muted-foreground: 120 15% 50%; /* Medium Green-Gray */
+
+    --popover: 0 0% 100%; /* White */
+    --popover-foreground: 120 25% 20%; /* Dark Desaturated Green-Gray */
+
+    --card: 0 0% 100%; /* White */
+    --card-foreground: 120 25% 20%; /* Dark Desaturated Green-Gray */
+
+    --border: 120 20% 88%; /* Light Greenish Gray Border */
+    --input: 120 20% 88%; /* Light Greenish Gray Input */
+
+    --primary: 145 65% 40%; /* Deep Emerald Green */
+    --primary-foreground: 145 20% 95%; /* Very Light Greenish White */
+
+    --secondary: 140 40% 75%; /* Lighter Muted Green */
+    --secondary-foreground: 145 50% 25%; /* Darker Green for text on secondary */
+
+    --accent: 160 70% 45%; /* Bright Tealish Green */
+    --accent-foreground: 0 0% 100%; /* White */
+
+    --destructive: 0 72% 51%; /* Default Destructive Red */
+    --destructive-foreground: 0 0% 98%; /* Light text on destructive */
+
+    --ring: 145 60% 55%; /* Slightly Lighter Primary Green for rings */
+    --radius: 0.5rem;
+
+    /* Chart colors - can be kept or adjusted */
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+
+    /* Sidebar specific theme */
+    --sidebar-background: 145 40% 28%; /* Darker Emerald Green */
+    --sidebar-foreground: 145 25% 85%; /* Light Greenish White */
+    --sidebar-primary: 160 70% 45%; /* Tealish Green Accent for active items */
+    --sidebar-primary-foreground: 0 0% 100%; /* White */
+    --sidebar-accent: 145 40% 35%; /* Slightly Lighter Dark Emerald for hover */
+    --sidebar-accent-foreground: 145 25% 95%; /* Very Light Greenish White */
+    --sidebar-border: 145 40% 20%; /* Darker border for sidebar */
+    --sidebar-ring: 160 70% 45%; /* Tealish Green Accent Ring */
+  }
+
+  .dark {
+    --background: 150 20% 10%; /* Very Dark Desaturated Green-Blue */
+    --foreground: 150 25% 88%; /* Light Muted Green-Gray */
+
+    --muted: 150 15% 20%; /* Darker Muted Green-Gray */
+    --muted-foreground: 150 20% 65%; /* Medium-Light Green-Gray */
+
+    --popover: 150 20% 12%; /* Darker Popover Green-Blue */
+    --popover-foreground: 150 25% 88%;
+
+    --card: 150 20% 14%; /* Slightly Lighter Dark Green-Blue for cards */
+    --card-foreground: 150 25% 88%;
+
+    --border: 150 15% 25%; /* Subtle Dark Green-Blue Border */
+    --input: 150 15% 25%; /* Subtle Dark Green-Blue Input */
+
+    --primary: 145 60% 55%; /* Brighter Emerald Green for dark mode */
+    --primary-foreground: 145 30% 15%; /* Very Dark Green for contrast */
+
+    --secondary: 150 30% 30%; /* Muted, Darker Green-Blue */
+    --secondary-foreground: 150 25% 80%; /* Lighter Muted Green-Gray */
+
+    --accent: 160 65% 55%; /* Brighter Tealish Green for dark mode */
+    --accent-foreground: 160 25% 10%; /* Very Dark for contrast on accent */
+
+    --destructive: 0 65% 55%; /* Adjusted Destructive Red for dark */
+    --destructive-foreground: 0 0% 98%;
+
+    --ring: 145 60% 65%; /* Adjusted Ring Green for dark */
+
+    /* Chart colors for dark mode - can be adjusted */
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+
+    /* Sidebar specific theme for dark mode */
+    --sidebar-background: 150 25% 8%; /* Even Darker Green-Blue */
+    --sidebar-foreground: 150 30% 75%; /* Slightly Desaturated Light Green */
+    --sidebar-primary: 160 65% 55%; /* Brighter Tealish Green for active items */
+    --sidebar-primary-foreground: 160 30% 10%; /* Almost Black for text on active */
+    --sidebar-accent: 150 20% 18%; /* Slightly Lighter Dark Green-Blue for hover */
+    --sidebar-accent-foreground: 150 30% 85%;
+    --sidebar-border: 150 20% 5%; /* Darker border for sidebar */
+    --sidebar-ring: 160 65% 55%; /* Tealish Green Accent Ring */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }
